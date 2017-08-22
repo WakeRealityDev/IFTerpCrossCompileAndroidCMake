@@ -1,0 +1,3 @@
+# not going to include the Interactive Fiction interpeters source code and RemGlk in this project
+# ignore the source folders
+loadable_engines/

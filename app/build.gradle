@@ -10,8 +10,11 @@ android {
         versionCode 1
         versionName "1.0"
         externalNativeBuild {
+            // gnustl_static results in Glulx + RemGlk at 847816 bytes   '-DANDROID_STL=gnustl_static'
+            // gnustl_shared results in Glulx + RemGlk at 847816 bytes   '-DANDROID_STL=gnustl_shared'
             cmake {
-                arguments '-DANDROID_TOOLCHAIN=clang'
+                arguments  '-DANDROID_PLATFORM=android-14', '-DANDROID_TOOLCHAIN=clang'
+
             }
         }
     }
@@ -27,6 +30,7 @@ android {
         }
     }
     productFlavors {
+        /*
         arm7 {
             // in the future, ndk.abiFilter might also work
             ndk {
@@ -43,6 +47,7 @@ android {
                 abiFilter 'armeabi'
             }
         }
+        */
         x86 {
             ndk {
                 abiFilter 'x86'
@@ -53,6 +58,7 @@ android {
                 abiFilter 'x86_64'
             }
         }
+        /*
         mips {
             ndk {
                 abiFilters 'mips', 'mips64'
@@ -63,6 +69,7 @@ android {
                 abiFilters 'mips', 'mips64', 'x86', 'x86_64'
             }
         }
+        */
     }
 }
 
