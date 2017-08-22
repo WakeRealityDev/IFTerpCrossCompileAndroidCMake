@@ -7,11 +7,9 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIE -pie")
 
 
 # is this library bigger due to?
-#  "Don't use these flags: -pie, -fpie, -fPIE, -fpic, -fPIC. Some of these are useful in shared libraries, so enable them only when compiling shared libraries."
+#   http://ptspts.blogspot.com/2013/12/how-to-make-smaller-c-and-c-binaries.html
+#   "Don't use these flags: -pie, -fpie, -fPIE, -fpic, -fPIC. Some of these are useful in shared libraries, so enable them only when compiling shared libraries."
 #
-
-# set(EXECUTABLE_OUTPUT_PATH      "${CMAKE_CURRENT_SOURCE_DIR}/src/main/assets/${ANDROID_ABI}")
-# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}")
 
 
 set(CMAKE_VERBOSE_MAKEFILE on)
@@ -31,7 +29,6 @@ add_executable( # Specifies the name of the executable.
              unixstrt.c
              )
 
-# target_link_libraries(lib_app_glulxe.so LINK_PUBLIC remglk)
 target_link_libraries(lib_app_glulxe.so remglk)
 
 target_include_directories (lib_app_glulxe.so PUBLIC)

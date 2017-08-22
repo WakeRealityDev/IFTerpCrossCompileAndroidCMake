@@ -29,7 +29,7 @@ You will not need to run ndk-build, the C code build should be automatically per
 
 Resulting APK
 ===============
-The apk should have two binary files:
+The APK built with this project should have two binary files in the libs directory:
 
 lib_app_glulxe.so 450kB  
 libhello-jni.so  6kB

@@ -1,6 +1,7 @@
 #
-# (c) Copyright 2017 Stephen A. Gutknecht. All Rights Reserved.
-# License granted: Public Domain, world wide.
+# portions (c) Copyright 2015 Google, Inc with Apache 2.0 license for the original "Hello JNI" NDK example app code
+# portions (c) Copyright 2017 Stephen A. Gutknecht. All Rights Reserved.
+# License granted: Apache 2.0 license to maintain compatibility with existing "Hello JNI" NDK example app code
 #
 
 #  reference NDK 15c sdk/cmake/3.6.4111459/bin/cmake
