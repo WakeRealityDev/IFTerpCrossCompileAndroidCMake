@@ -36,14 +36,14 @@ libhello-jni.so  6kB
 
 The libhello-jni.so is part of the Google Sample and isn't relevant to the Interactive Fiction code, but it was left in to keep things simple.
 
-The important thing to understand is that lib_app_glulxe.so is actualy not a dynamic library but instead an entire executable binary for the android device.  It is only named ".so" to be package dinto the APK - it is not the proper extension for the file given it's stand-alone executable binary format.
+The important thing to understand is that lib_app_glulxe.so is actualy not a dynamic library but instead an stand-alone executable binary for the Android device.  It is only named ".so" to be packaged into the APK - it is not the proper extension for the file given it's stand-alone executable binary format.
 
 If you unzip the APK and extract the lib_app_glulxe.so, you should be able to test it directly as an Android exectuable app:
 
 ```bash
 $ adb push lib_app_glulxe.so /data/local/tmp
 $ adb shell
-  Now on Android shell:
+  Now on Android shell it can be executed directly:
   $ cd /data/local/tmp
   $ chmod +x lib_app_glulxe.so
   $ ./lib_app_glulxe.so
