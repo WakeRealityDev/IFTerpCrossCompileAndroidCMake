@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+   >
+
+    <!--
+    Makes no effort to deal with overflow.
+    Yes, you will need a wide enough screen or go landscape to reach those right-most clicks
+    -->
+    <RelativeLayout
+        android:id="@+id/topRemoteStatusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/topStatusTextView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello and welcome to Thunderfall, a demonstration RemGlk self-contained app."
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/topPlayerInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topRemoteStatusLayout"
+        >
+        <TextView
+            android:id="@+id/inputLabelTextView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input: "
+            />
+        <EditText
+            android:id="@+id/inputEditText0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/inputLabelTextView0"
+            android:layout_alignBaseline="@+id/inputLabelTextView0"
+            android:hint="player input here"
+            />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/storyOutputScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topPlayerInputLayout"
+        >
+        <RelativeLayout
+            android:id="@+id/storyOutputScrollLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/storyOutputRawTextView0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFB0"
+                />
+            <TextView
+                android:id="@+id/remGlkInfoOutputTextView0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#B0FFFF"
+                android:layout_below="@id/storyOutputRawTextView0"
+                />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/bottomMostView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bottom of layout"
+        android:layout_below="@+id/storyOutputScrollView"
+        />
+</RelativeLayout>

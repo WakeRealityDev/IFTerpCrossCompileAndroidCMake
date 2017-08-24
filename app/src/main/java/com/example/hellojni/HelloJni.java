@@ -19,6 +19,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.wakereality.thunderfall.R;
+
 public class HelloJni extends AppCompatActivity {
 
     @Override
