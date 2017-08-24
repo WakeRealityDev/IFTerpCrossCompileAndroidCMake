@@ -38,7 +38,13 @@ public class StoryRemGlkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         onCreateLayoutSpecific();
 
-        boolean storagePermissionGood = UserRuntimePermission.verifyStoragePermissions(this);
+        /*
+        File permission is optional for this app, as this example extracts the included Glulx story from assets into
+            the cache, so write and read permission to the /sdcard/ path is not required.
+            CURRENTLY Hard-coded to always say good
+         */
+        boolean storagePermissionGood = true;
+        // storagePermissionGood = UserRuntimePermission.verifyStoragePermissions(this);
 
         if (storagePermissionGood) {
             engineProcess = new NativeFictionEngineProcess();
