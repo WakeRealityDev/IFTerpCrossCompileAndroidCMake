@@ -9,14 +9,6 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-        externalNativeBuild {
-            // gnustl_static results in Glulx + RemGlk at 847816 bytes   '-DANDROID_STL=gnustl_static'
-            // gnustl_shared results in Glulx + RemGlk at 847816 bytes   '-DANDROID_STL=gnustl_shared'
-            cmake {
-                arguments  '-DANDROID_PLATFORM=android-14', '-DANDROID_TOOLCHAIN=clang'
-
-            }
-        }
     }
     buildTypes {
         release {
@@ -24,57 +16,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-        }
-    }
-    productFlavors {
-        /*
-        arm7 {
-            // in the future, ndk.abiFilter might also work
-            ndk {
-                abiFilter 'armeabi-v7a'
-            }
-        }
-        arm8 {
-            ndk {
-                abiFilters 'arm64-v8a'
-            }
-        }
-        arm {
-            ndk {
-                abiFilter 'armeabi'
-            }
-        }
-        */
-        x86 {
-            ndk {
-                abiFilter 'x86'
-            }
-        }
-        x86_64 {
-            ndk {
-                abiFilter 'x86_64'
-            }
-        }
-        /*
-        mips {
-            ndk {
-                abiFilters 'mips', 'mips64'
-            }
-        }
-        universal {
-            ndk {
-                abiFilters 'mips', 'mips64', 'x86', 'x86_64'
-            }
-        }
-        */
-    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    // NDK code, C and C++ code for Interactive Fiction engines, is all contained in library
+    compile project(':fictionengines')
 }

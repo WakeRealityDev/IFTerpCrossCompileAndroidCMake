@@ -1,0 +1,89 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 2
+        versionName "0.0.2"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            // gnustl_static results in Glulx + RemGlk at 847816 bytes   '-DANDROID_STL=gnustl_static'
+            // gnustl_shared results in Glulx + RemGlk at 847816 bytes   '-DANDROID_STL=gnustl_shared'
+            cmake {
+                arguments  '-DANDROID_PLATFORM=android-14', '-DANDROID_TOOLCHAIN=clang'
+
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+
+    /*
+    productFlavors {
+        arm7 {
+            // in the future, ndk.abiFilter might also work
+            ndk {
+                abiFilter 'armeabi-v7a'
+            }
+        }
+        arm8 {
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+        }
+        arm {
+            ndk {
+                abiFilter 'armeabi'
+            }
+        }
+        x86 {
+            ndk {
+                abiFilter 'x86'
+            }
+        }
+        x86_64 {
+            ndk {
+                abiFilter 'x86_64'
+            }
+        }
+        mips {
+            ndk {
+                abiFilters 'mips', 'mips64'
+            }
+        }
+        universal {
+            ndk {
+                abiFilters 'mips', 'mips64', 'x86', 'x86_64'
+            }
+        }
+    }
+    */
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+
+    compile 'org.greenrobot:eventbus:3.0.0'
+}

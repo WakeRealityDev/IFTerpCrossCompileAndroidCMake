@@ -11,13 +11,13 @@
 
 # starting from current path, root of this project.
 pwd
-if [ ! -d "app/src/main/cpp/makefiles" ]; then
+if [ ! -d "fictionengines/src/main/cpp/makefiles" ]; then
   echo "!!!! ERROR_CODE:A00 expected folder does not exist, aborting"
   exit 1
 fi
 
-mkdir -p app/src/main/cpp/loadable_engines
-cd app/src/main/cpp/loadable_engines
+mkdir -p fictionengines/src/main/cpp/loadable_engines
+cd fictionengines/src/main/cpp/loadable_engines
 
 pwd
 
