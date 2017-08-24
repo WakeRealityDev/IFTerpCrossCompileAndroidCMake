@@ -4,6 +4,8 @@ This is a newer alternate to the https://github.com/WakeRealityDev/IFTerpCrossCo
 
 This project uses clang and CMake system with integrated Android Studio 2.3.3 compilation of the NDK code.
 
+This app is also known as Thunderfall.
+
 Based on Hello JNI
 ======================
 Hello JNI is an Android sample that uses JNI to call C code from a Android Java Activity.
@@ -53,9 +55,9 @@ At this point you should be able to send JSON to stdin to interface with the Rem
 
 Beyond Hello JNI
 ==================
-The commit history of this project will show how a library was introduced and the NDK code moved into the library.
+The commit history of this project will show how a library named :fictionengines was introduced and the NDK code moved into the library.
  
-A sample story is now included in the app, and a basic Activity that can render the RemGlk JSON is now included, borrowed from the Thunderstrike app.
+A sample story is now included in the app, and a basic Activity that can render the RemGlk JSON is now included, borrowed from the Thunderstrike app. This app is now named Thunderfall.
 
 
 License for the original Hello JNI
