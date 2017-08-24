@@ -4,7 +4,7 @@ This is a newer alternate to the https://github.com/WakeRealityDev/IFTerpCrossCo
 
 This project uses clang and CMake system with integrated Android Studio 2.3.3 compilation of the NDK code.
 
-This app is also known as Thunderfall.
+This example app is also known as Thunderfall.
 
 Based on Hello JNI
 ======================
@@ -31,12 +31,12 @@ You will not need to run ndk-build, the C code build should be automatically per
 
 Resulting APK
 ===============
-The APK built with this project should have two binary files in the libs directory:
+The APK built with this project should have two binary files in the libs directory (example, arm-v7a CPU):
 
-lib_app_glulxe.so 450kB  
-libhello-jni.so  6kB
+lib_app_glulxe.so 228kB  
+libhello-jni.so  9kB
 
-The libhello-jni.so is part of the Google Sample and isn't relevant to the Interactive Fiction code, but it was left in to keep things simple.
+The libhello-jni.so is part of the Google Sample and isn't relevant to the Interactive Fiction code, but it was left in to show the inherited orgins of the code and CMake compilation system.
 
 The important thing to understand is that lib_app_glulxe.so is actualy not a dynamic library but instead an stand-alone executable binary for the Android device.  It is only named ".so" to be packaged into the APK - it is not the proper extension for the file given it's stand-alone executable binary format.
 
