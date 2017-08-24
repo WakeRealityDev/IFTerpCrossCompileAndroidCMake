@@ -51,6 +51,13 @@ $ adb shell
 At this point you should be able to send JSON to stdin to interface with the RemGlk that is on top of Glulxe interpreter.
 
 
+Beyond Hello JNI
+==================
+The commit history of this project will show how a library was introduced and the NDK code moved into the library.
+ 
+A sample story is now included in the app, and a basic Activity that can render the RemGlk JSON is now included, borrowed from the Thunderstrike app.
+
+
 License for the original Hello JNI
 ------------------------------------
 Copyright 2015 Google, Inc.
