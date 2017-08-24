@@ -25,7 +25,7 @@ import org.json.JSONObject;
  * Apache 2.0 license on this source file
  * (c) Copyright 2017, Stephen A Gutknecht, All Rights Reserved
  *
- * This code is largely reused from the previously published ThunderStrike app that was
+ * This code is largely reused from the previously published Thunderstrike app that was
  *    released on February 11, 2017. https://github.com/WakeRealityDev/Thunderstrike
  *
  * */
