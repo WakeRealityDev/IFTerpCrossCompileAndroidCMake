@@ -3,8 +3,9 @@
 cmake_minimum_required(VERSION 3.6.0)
 project(glulxe)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIE -pie")
-
+# For operating system security reasons, PIE is required on Android 5.0 and newer, and is likley good practice on all systems.
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fPIE -pie")
 
 # is this library bigger due to?
 #   http://ptspts.blogspot.com/2013/12/how-to-make-smaller-c-and-c-binaries.html
@@ -14,6 +15,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIE -pie")
 
 set(CMAKE_VERBOSE_MAKEFILE on)
 
+# specific to Glulxe compile flags
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -DOS_UNIX -DTOLERATE_SUPERGLUS_BUG")
 
 

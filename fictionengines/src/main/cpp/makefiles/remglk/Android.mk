@@ -26,7 +26,8 @@ LOCAL_SRC_FILES := \
                  rgschan.c rgblorb.c cgunicod.c cgdate.c gi_dispa.c gi_debug.c gi_blorb.c \
                  glkstart.c
 
-LOCAL_CFLAGS += -fPIE
+# note: properly "PIC" instead of "PIE" on CFLAGS
+LOCAL_CFLAGS += -fPIC
 LOCAL_LDFLAGS += -fPIE -pie
 
 include $(BUILD_STATIC_LIBRARY)

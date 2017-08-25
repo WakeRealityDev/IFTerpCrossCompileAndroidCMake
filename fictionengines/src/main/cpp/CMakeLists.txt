@@ -112,11 +112,15 @@ set(EXECUTABLE_OUTPUT_PATH      "${PROJECT_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}
 #:::
 #::: Interactive Fiction engines / interpreter apps to link with RemGlk
 #:::
+#::: RemGLk should be first, as it is a Glk library that will be linked by all the others.
 add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/remglk)
 add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/glulxe)
+add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/git)
 
 
-
+#:::
+#::: The original hello-uni NDK example app legacy. This can be removed.
+#:::
 add_library(hello-jni SHARED
             hello-jni.c)
 

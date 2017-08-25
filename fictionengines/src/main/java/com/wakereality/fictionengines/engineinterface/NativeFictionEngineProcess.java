@@ -21,7 +21,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
- * Created by adminsag on 8/20/17.
+ * Created by Stephen A. Gutknecht on 8/20/17.
  * Design goals:
  *    1. Allow multiple concurrent instances of this class, multiple engines running at the same time.
  *
@@ -67,7 +67,7 @@ public class NativeFictionEngineProcess {
 
     public boolean prepEngine(Context context) {
         engineAppBinaryPath = context.getApplicationInfo().nativeLibraryDir + File.separator + "lib_app_git.so";
-        engineAppBinaryPath = context.getApplicationInfo().nativeLibraryDir + File.separator + "lib_app_glulxe.so";
+        // engineAppBinaryPath = context.getApplicationInfo().nativeLibraryDir + File.separator + "lib_app_glulxe.so";
         // Will use the cache folder, which the user can tell Android to clear to reclaim the consumed space.
         storyDataFile = new File(context.getCacheDir(), "Mid_the_Sagebrush_and_the_Cactus.gblorb");
         if (! storyDataFile.exists()) {

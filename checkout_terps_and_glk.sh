@@ -46,3 +46,7 @@ cp ../makefiles/remglk/CMakeLists.txt remglk/
 gitsourcecheckout https://github.com/erkyrath/glulxe glulxe
 cp ../makefiles/glulxe/Android.mk     glulxe/
 cp ../makefiles/glulxe/CMakeLists.txt glulxe/
+
+gitsourcecheckout https://github.com/DavidKinder/Git.git git
+cp ../makefiles/git/Android.mk        git/
+cp ../makefiles/git/CMakeLists.txt    git/

@@ -19,8 +19,8 @@ LOCAL_CFLAGS    := -g -DOS_UNIX -DTOLERATE_SUPERGLUS_BUG
 LOCAL_STATIC_LIBRARIES := remglk
 LOCAL_LDLIBS    := -llog
 
-LOCAL_CFLAGS += -fPIE
+# note: properly "PIC" instead of "PIE" on CFLAGS
+LOCAL_CFLAGS += -fPIC
 LOCAL_LDFLAGS += -fPIE -pie
 
 include $(BUILD_EXECUTABLE)
-
