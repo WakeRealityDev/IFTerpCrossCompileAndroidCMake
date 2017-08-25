@@ -18,7 +18,7 @@ LOCAL_CFLAGS    := -DUSE_INLINE \
 LOCAL_STATIC_LIBRARIES := remglk
 LOCAL_LDLIBS    := -llog
 
-# For operating system security reasons, PIE is required on Android 5.0 and newer, and is likley good practice on all systems.
+# For operating system security reasons, PIE is required on Android 5.0 and newer, and is likely good practice on all systems.
 # Enable PIE manually. Will get reset on $(CLEAR_VARS) - here. NOTE: PIC and PIE, not just PIE
 LOCAL_CFLAGS += -fPIC
 LOCAL_LDFLAGS += -fPIE -pie

@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.6.0)
 project(git)
 
-# For operating system security reasons, PIE is required on Android 5.0 and newer, and is likley good practice on all systems.
+# For operating system security reasons, PIE is required on Android 5.0 and newer, and is likely good practice on all systems.
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fPIE -pie")
 
