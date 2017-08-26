@@ -117,6 +117,7 @@ add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/remglk)
 add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/glulxe)
 add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/git)
 add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/magnetic)
+add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/level9)
 
 
 #:::

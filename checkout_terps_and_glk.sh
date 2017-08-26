@@ -2,7 +2,7 @@
 
 #
 # (c) Copyright 2017 Stephen A. Gutknecht. All Rights Reserved.
-# License granted: Public domain, world wide.
+# License granted: Public Domain, world wide.
 #
 
 #
@@ -24,6 +24,7 @@ pwd
 
 actionwhat=$1
 onstep=unknown
+# default to all actions if no arguments given
 if [[ $# -eq 0 ]] ; then
     actionwhat=all
 fi
@@ -74,3 +75,11 @@ gitsourcecheckout https://github.com/DavidKinder/Magnetic magnetic
 cp ../makefiles/magnetic/Android.mk        magnetic/
 cp ../makefiles/magnetic/CMakeLists.txt    magnetic/
 fi
+
+onstep=level9
+if [[ "$actionwhat" == "all" || "$actionwhat" == "$onstep" ]]; then
+gitsourcecheckout https://github.com/DavidKinder/Level9 level9
+cp ../makefiles/level9/Android.mk        level9/
+cp ../makefiles/level9/CMakeLists.txt    level9/
+fi
+
