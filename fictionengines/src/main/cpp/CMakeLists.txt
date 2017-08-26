@@ -116,6 +116,7 @@ set(EXECUTABLE_OUTPUT_PATH      "${PROJECT_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}
 add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/remglk)
 add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/glulxe)
 add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/git)
+add_subdirectory (${CMAKE_SOURCE_DIR}/loadable_engines/magnetic)
 
 
 #:::

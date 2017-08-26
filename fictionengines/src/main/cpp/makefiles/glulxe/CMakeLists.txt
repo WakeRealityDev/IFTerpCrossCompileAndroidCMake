@@ -1,7 +1,7 @@
 #  reference NDK 15c sdk/cmake/3.6.4111459/bin/cmake
 #  however, making minimum to 3.6.4 resulted in message "You are running 3.6.0-rc2"
 cmake_minimum_required(VERSION 3.6.0)
-project(glulxe)
+project(glulxe C)
 
 # For operating system security reasons, PIE is required on Android 5.0 and newer, and is likely good practice on all systems.
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")

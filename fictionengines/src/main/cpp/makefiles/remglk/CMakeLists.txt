@@ -1,7 +1,7 @@
 #  reference NDK 15c sdk/cmake/3.6.4111459/bin/cmake
 #  however, making minimum to 3.6.4 resulted in message "You are running 3.6.0-rc2"
 cmake_minimum_required(VERSION 3.6.0)
-project(RemGlk)
+project(RemGlk C)
 
 set(CMAKE_VERBOSE_MAKEFILE on)
 
